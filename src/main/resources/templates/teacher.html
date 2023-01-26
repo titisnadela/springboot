@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Spring MVC Form Handling</title>
+</head>
+
+<body>
+<h2>Teacher Information</h2>
+<form method = "POST" th:action ="@{/addTeacher}" th:object="${teacher}">
+  <table>
+    <tr>
+      <td><label>Name</label></td>
+      <td><input type="text" th:field="*{name}" /></td>
+    </tr>
+    <tr>
+      <td><label>No Pegawai</label></td>
+      <td><input type = "text" th:field="*{noPegawai}" /></td>
+    </tr>
+
+    <tr>
+      <td colspan = "2">
+        <input type = "submit" value = "Submit"/>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
